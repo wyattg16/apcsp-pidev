@@ -23,12 +23,14 @@ int main()
   float d = 10.26;
   float e = 3.14;
   float f = 0;
+  int* ptrtod = &d;
+  int* ptrtoe = &e;
+  printf("The value of d is %f and the address of d is %d\n", d, ptrtod);
+  printf("The value of e is %f and the address of e is %d\n", e, ptrtoe);
 
-  printf("The value of d is %f and the value of e is %f\n", d, e);
+  e = *ptrtod;
+  d = 8;
 
-  ptrtoa = &d;
-  printf("The address of d is %d\n", ptrtoa);
-
-  ptrtoa = &e;
-  printf("The address of e is %d\n", ptrtoa);
-}
+  printf("After the swap, the value of d is %f\n", d);
+  printf("After the swap, the value of e is %f\n", e);
+} 
